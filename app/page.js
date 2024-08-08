@@ -91,7 +91,7 @@ export default function Home() {
       gap={2}
       bgcolor="#8AAAE5"
     >
-      <Typography variant='h1' gutterBottom color="#FFFFFF">Inventory Management</Typography>
+      <Typography variant='h1' gutterBottom color="#FFFFFF" top="50%" >Pantry Tracker</Typography>
       <Modal open={open} onClose={handleClose}>
         <Box 
           position="absolute"
@@ -205,19 +205,7 @@ export default function Home() {
             </Box>
         ))} 
       </Stack>
-    </Box>
-    <Button variant='contained' onClick={getRecipes}>
-      Get Recipe Suggestions
-    </Button>  
-    {recipes.length > 0 && ( {/* <-- Displaying fetched recipes */})}
-    <Box mt={4} p={4} border="1px solid #333" bgcolor="#f0f0f0">
-      <Typography variant='h4' gutterBottom>Recipe Suggestions</Typography>
-      <Stack spacing={2}>
-        {recipes.map((recipe, index) => (
-          <Typography key={index} variant='h6'>{recipe}</Typography>
-        ))}
-      </Stack>
-    </Box>
+    </Box>  
   </Box>
   );
 }
